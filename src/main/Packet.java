@@ -49,7 +49,7 @@ public abstract class Packet implements Comparable<Packet> {
 	}
 	
 	/*
-	 * Системный пакет будет создаваться с вероятностью 50%
+	 * The system packets will be created with 50% probability
 	 */
 	private static boolean generateSystemPacket() {
 		int val = ThreadLocalRandom.current().nextInt(100);
@@ -85,11 +85,11 @@ public abstract class Packet implements Comparable<Packet> {
 		
 		StringBuilder strBuilder = new StringBuilder(
 			packetType == SYSTEM_PACKET ?
-					"системный пакет; " : "клиентский пакет; "
+					"system packet; " : "client packet; "
 	    )
-		.append("приоритет: " + priority + "; ")
-	    .append("размер: " + size + "; ")
-		.append("время создания: " + strTime);
+		.append("priority: " + priority + "; ")
+	    .append("size: " + size + "; ")
+		.append("time of creation: " + strTime);
 		
 		return strBuilder.toString();
 	}
